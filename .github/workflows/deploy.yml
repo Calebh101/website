@@ -34,7 +34,7 @@ jobs:
       - name: Install Jaspr CLI
         run: |
           dart install jaspr_cli
-          export PATH="$PATH":"$HOME/.local/state/Dart/install/bin"
+          echo "$HOME/.local/state/Dart/install/bin" >> $GITHUB_PATH
 
       - name: Build static site
         run: jaspr build
