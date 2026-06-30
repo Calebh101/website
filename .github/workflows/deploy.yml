@@ -32,7 +32,9 @@ jobs:
         run: flutter pub get
 
       - name: Install Jaspr CLI
-        run: dart install jaspr_cli
+        run: |
+          dart install jaspr_cli
+          export PATH="$PATH":"$HOME/.local/state/Dart/install/bin"
 
       - name: Build static site
         run: jaspr build
